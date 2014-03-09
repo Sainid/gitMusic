@@ -6,6 +6,7 @@ $(document).ready(function(){
 	var aboutView = new app.AboutView();
 	var uploadView = new app.UploadView();
 	var loginView = new app.LoginView();
+	var downloadView = new app.DownloadView();
 	app.router = new Router();
 
 	app.router.on('route:home', function(){
@@ -26,6 +27,11 @@ $(document).ready(function(){
 	app.router.on('route:upload', function()	{
 
 		uploadView.render();
+	});
+
+	app.router.on('route:download', function()	{
+
+		downloadView.render();
 	});
 
 	app.router.on('route:login', function() {
